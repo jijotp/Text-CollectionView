@@ -59,7 +59,7 @@ extension happinessViewController: UICollectionViewDataSource {
             
         } else {
             
-            if indexPath.row % 3 == 0 {
+            if indexPath.row % 5 == 0 {
                 if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BottomCollectionViewCell", for: indexPath) as? BottomCollectionViewCell {
                     cell.backgroundColor = .green
                     return cell
@@ -81,20 +81,20 @@ extension happinessViewController: UICollectionViewDelegateFlowLayout {
             let screeWidth = UIScreen.main.bounds.width - 16
             return CGSize(width: screeWidth, height: CGFloat(145))
         }
-        if indexPath.row % 3 == 0 {
+        if indexPath.row % 5 == 0 {
             let screeWidth = UIScreen.main.bounds.width - 16
             return CGSize(width: screeWidth, height: 50)
         }
-        let width = (UIScreen.main.bounds.width / 2) - 1
+        let width = (UIScreen.main.bounds.width / 2) - 4
         return CGSize(width: width, height: CGFloat(172))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        return 8.0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        return 8.0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
